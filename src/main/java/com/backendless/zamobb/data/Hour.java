@@ -15,6 +15,11 @@ public class Hour
   private java.util.Date updated;
   private String ownerId;
   private java.util.Date created;
+
+  public Hour(){
+
+  }
+
   public String getObjectId()
   {
     return objectId;

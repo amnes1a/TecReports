@@ -20,6 +20,7 @@
     <%
         String roomId = request.getParameter("roomid");
         Salon salon = TecReports.getRoom(roomId);
+        System.out.println(salon.getImage());
 
         out.write("<h1>"+salon.getName()+"</h1>");
         Map<Day, ArrayList<Events>> eventsPerDay = TecReports.getRoomShcedule(roomId);
@@ -38,7 +39,7 @@
     <hr>
     <fieldset>
         <legend>Opciones</legend>
-        <form action="report.jsp">
+        <form action="report_s.jsp">
             <input type="hidden" name="roomid" value=<%=roomId%>>
             <input type="submit" value="Reportar">
         </form>

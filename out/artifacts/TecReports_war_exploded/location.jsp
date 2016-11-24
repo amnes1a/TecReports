@@ -2,7 +2,8 @@
 <%@ page import="tecreports.TecReports" %>
 <%@ page import="javax.swing.plaf.synth.SynthTextAreaUI" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="com.backendless.zamobb.data.Salon" %><%--
+<%@ page import="com.backendless.zamobb.data.Salon" %>
+<%@ page import="com.backendless.zamobb.data.Bano" %><%--
   Created by IntelliJ IDEA.
   User: arturozamora
   Date: 11/19/16
@@ -26,6 +27,20 @@
             out.write("<form>");
             out.write("<input type=\"hidden\" name=\"roomid\" value="+e.getObjectId()+">");
             out.write("<button type=\"submit\" formaction=\"room.jsp\">"+e.getName()+"</button>");
+            out.write("</form>");
+        }
+    %>
+
+    <h1>Baño:</h1>
+    <%
+        Iterator<Bano> ban = TecReports.getBathrooms(locId);
+
+        while( ban.hasNext() )
+        {
+            Bano b = ban.next();
+            out.write("<form>");
+            out.write("<input type=\"hidden\" name=\"banoid\" value="+b.getObjectId()+">");
+            out.write("<button type=\"submit\" formaction=\"bano.jsp\">"+b.getDescripcion()+"</button>");
             out.write("</form>");
         }
     %>

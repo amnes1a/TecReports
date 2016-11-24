@@ -16,7 +16,7 @@ public class Schedule
   private Boolean Active;
   private Events IDr_Event;
   private Day IDr_Day;
-  private java.util.List<Salon> IDr_Salon;
+  private Salon IDr_Salon;
   public java.util.Date getCreated()
   {
     return created;
@@ -67,17 +67,17 @@ public class Schedule
     this.IDr_Day = IDr_Day;
   }
 
-  public java.util.List<Salon> getIDr_Salon()
+  public Salon getIDr_Salon()
   {
     return IDr_Salon;
   }
 
-  public void setIDr_Salon( java.util.List<Salon> IDr_Salon )
+  public void setIDr_Salon( Salon IDr_Salon )
   {
     this.IDr_Salon = IDr_Salon;
   }
 
-                                                    
+
   public Schedule save()
   {
     return Backendless.Data.of( Schedule.class ).save( this );

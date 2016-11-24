@@ -15,6 +15,11 @@ public class Events
   private java.util.Date created;
   private String Event_Name;
   private Hour IDr_Hour;
+
+  public Events(){
+
+  }
+
   public String getObjectId()
   {
     return objectId;

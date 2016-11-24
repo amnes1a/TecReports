@@ -19,6 +19,10 @@ public class Salon
   private Location IDr_Location;
   private java.util.List<Notas> IDr_Notas;
 
+  public Salon(){
+
+  }
+
   public String getName()
   {
     return Name;

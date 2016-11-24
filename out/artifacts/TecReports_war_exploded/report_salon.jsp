@@ -25,9 +25,18 @@
         ticketEncSalon.put( "details", request.getParameter("message") );
         ticketEncSalon.put( "IDr_Salon", salon );
 
-
+        try{
         Backendless.Persistence.of( "Ticket_Enc_Salon" ).save( ticketEncSalon );
-        
     %>
+        <h2>Reporte guardado satisfactoriamente.</h2>
+    <%
+        }catch(Exception e){
+
+    %>
+        <h2>Tu reporte falló :V LOL xD GG.</h2>
+    <%
+        }
+    %>
+
 </body>
 </html>

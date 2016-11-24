@@ -12,9 +12,11 @@ public class Tickets_Dica
   private String ownerId;
   private java.util.Date created;
   private String Student_ID;
+  private String IDr_Dica;
   private java.util.Date updated;
   private Boolean Status;
   private String objectId;
+  private Schedule IDr_Schedule;
   public String getOwnerId()
   {
     return ownerId;
@@ -33,6 +35,16 @@ public class Tickets_Dica
   public void setStudent_ID( String Student_ID )
   {
     this.Student_ID = Student_ID;
+  }
+
+  public String getIDr_Dica()
+  {
+    return IDr_Dica;
+  }
+
+  public void setIDr_Dica( String IDr_Dica )
+  {
+    this.IDr_Dica = IDr_Dica;
   }
 
   public java.util.Date getUpdated()
@@ -55,7 +67,17 @@ public class Tickets_Dica
     return objectId;
   }
 
-                                                    
+  public Schedule getIDr_Schedule()
+  {
+    return IDr_Schedule;
+  }
+
+  public void setIDr_Schedule( Schedule IDr_Schedule )
+  {
+    this.IDr_Schedule = IDr_Schedule;
+  }
+
+
   public Tickets_Dica save()
   {
     return Backendless.Data.of( Tickets_Dica.class ).save( this );
