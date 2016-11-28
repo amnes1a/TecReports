@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Title</title>
+
 </head>
 <body>
 <%
@@ -24,6 +25,7 @@
         String ticketId = request.getParameter("ticketId");
         String scheduleId = request.getParameter("scheduleId");
         TecReports.solveTicketDica(option, scheduleId, ticketId);
+        response.sendRedirect("dica_admin.jsp");
     }else{
         response.sendRedirect("index.jsp");
     }

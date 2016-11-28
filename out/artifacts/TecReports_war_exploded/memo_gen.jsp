@@ -20,13 +20,9 @@
         boolean status = TecReports.setScheduleEvent(hour, eventDescrip, salonid, day, userid);
 
         if(status){
-    %>
-        <h1>Se agregó ssss</h1>
-    <%
+            response.sendRedirect("index.jsp");
         }else{
-    %>
-        <h1>No funcionó, lol NOOB.</h1>
-    <%
+            response.sendRedirect("index.jsp");
         }
     %>
 </body>
